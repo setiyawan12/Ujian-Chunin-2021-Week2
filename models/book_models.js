@@ -1,5 +1,4 @@
 const conn = require ('../connection/connections')
-
 module.exports={
     showData: () => {
         return new Promise((resolve, reject) => {

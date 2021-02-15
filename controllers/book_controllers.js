@@ -2,7 +2,7 @@ const bookModel = require('../models/book_models')
 
 
 module.exports={
-    viewAllData : (req, res) => {
+    viewAllData : (_req, res) => {
         bookModel.showData()
             .then((data) => {
                 res.render('index_view',{
@@ -16,7 +16,7 @@ module.exports={
                 res.send(error)
             })
     },
-    getAllData : (req, res) => {
+    getAllData : (_req, res) => {
         bookModel.showData()
             .then((data) => {
                 res.status(200).send({

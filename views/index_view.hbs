@@ -1,7 +1,16 @@
-
-      <div class="container">
-        <a href="/add" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
-        <table class="highlight">
+{{!-- <div class="fixed-action-btn">
+  <a class="btn-floating btn-small red">
+    <i class="small material-icons"></i>
+  </a>
+  <ul>
+    <li><a class="btn-floating btn-small red"><i class="material-icons"></i></a></li>
+    <li><a class="btn-floating btn-small yellow darken-1"><i class="material-icons"></i></a></li>
+    <li><a class="btn-floating btn-small green"><i class="material-icons"></i></a></li>
+    <li><a class="btn-floating btn-small blue"><i class="material-icons"></i></a></li>
+  </ul>
+</div> --}}
+      <div class="">
+        <table class="highlight centered">
             <thead>
               <tr>
                   <th>Judul</th>
@@ -10,6 +19,7 @@
                   <th>kategori</th>
                   <th>tahun</th>
                   <th>Cover</th>
+                  <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -21,6 +31,10 @@
                   <td>{{kategori}}</td>
                   <td>{{tahun}}</td>
                   <td>{{cover}}</td>
+                  <td>
+                     <a class="btn-floating btn-small red"><i class="small material-icons">delete</i></a>
+                     <a class="btn-floating btn-small yellow lighten-1"><i class="small material-icons">update</i></a>
+                     </td>
                 </tr>
                 {{/each}}
             </tbody>

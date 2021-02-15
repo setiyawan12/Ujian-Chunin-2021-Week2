@@ -1,0 +1,28 @@
+
+      <div class="container">
+        <a href="/add" class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <table class="highlight">
+            <thead>
+              <tr>
+                  <th>Judul</th>
+                  <th>penerbit</th>
+                  <th>penulis</th>
+                  <th>kategori</th>
+                  <th>tahun</th>
+                  <th>Cover</th>
+              </tr>
+            </thead>
+            <tbody>
+                {{#each books }}
+                <tr>
+                  <td>{{judul}}</td>
+                  <td>{{penerbit}}</td>
+                  <td>{{penulis}}</td>
+                  <td>{{kategori}}</td>
+                  <td>{{tahun}}</td>
+                  <td>{{cover}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+          </table>         
+      </div>

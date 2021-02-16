@@ -1,15 +1,40 @@
-{{!-- <div class="fixed-action-btn">
-  <a class="btn-floating btn-small red">
-    <i class="small material-icons"></i>
-  </a>
-  <ul>
-    <li><a class="btn-floating btn-small red"><i class="material-icons"></i></a></li>
-    <li><a class="btn-floating btn-small yellow darken-1"><i class="material-icons"></i></a></li>
-    <li><a class="btn-floating btn-small green"><i class="material-icons"></i></a></li>
-    <li><a class="btn-floating btn-small blue"><i class="material-icons"></i></a></li>
-  </ul>
-</div> --}}
-      <div class="">
+<button class="btn red modal-trigger" data-target="terms">New</button>
+  <div class="modal" id="terms">
+    <div class="modal-content">
+        <form action="/save" method="POST">
+        <div class="input-field">
+        <div class="">
+        <label for="judul">Judul</label>
+        <input  id="judul" type="text" class="validate" name="judul">
+        </div>
+        <div class="">
+        <label for="penerbit">Penerbit</label>
+        <input  id="penerbit" type="text" class="validate" name="penerbit">
+        </div>
+        <div class="">
+        <label for="penulis">Penulis</label>
+        <input id="penulis" type="text" class="validate" name="penulis">
+        </div>
+        <div class="">
+        <label for="kategori">Kategori</label>
+        <input id="kategori" type="text" class="validate" name="kategori">
+        </div>
+        <div class="">
+        <label for="tahun">Tahun</label>
+        <input  id="tahun" type="text" class="validate" name="tahun">
+        </div>
+        <div class="">
+        <label for="cover">Cover</label>
+        <input  id="cover" type="text" class="validate" name="cover">
+        </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn teal">Add</button>
+        <button class="btn red modal-close">cancel</button>
+    </div>
+    </form>
+  </div>
         <table class="highlight centered">
             <thead>
               <tr>
@@ -39,4 +64,3 @@
                 {{/each}}
             </tbody>
           </table>         
-      </div>

@@ -13,27 +13,8 @@ app.engine('hbs', exphbs({
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.set(bodyParser.json());
-app.set(bodyParser.urlencoded({extended:false}));
-
-// app.post("/save", (req, res) => {
-//     let {data} = req.body;
-//     console.log('data', data);
-//     let sql = "INSERT INTO books SET ?";
-//     conn.query(sql, data, (err, results) => {
-//         if (!err){
-//             results.redirect('/');
-//         }else{
-//             throw err;
-//         }
-//     });
-// });
-// app.get('/books', bookController.getAllData);
-// app.get('/', bookController.viewAllData);
-// app.post('/book',bookController.saveData)
-// app.get('/save',bookController.saveData);
-// app.get('/', bookController.findAll);
-// app.post('/book', bookController.create);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.use("/", mainRouter)
 app.use(function (req, res) {

@@ -13,8 +13,36 @@ module.exports={
             res.send(error)
         })
     },
+    getDataId:(req,res)=>{
+        const id = req.params;
+        bookModel.getDataBookById(id)
+        .then((data)=>{
+            res.status(200).send({
+                messag:'success',
+                status:true,
+                data:data
+            })
+        })
+        .catch((error)=>{
+            res.send(error)
+        })
+    },
+    deleteDataId:(req,res)=>{
+        const id = req.params;
+        bookModel.DeleteDataBookById(id)
+        .then((data)=>{
+            res.status(200).send({
+                messag:'success',
+                status:true,
+                data:data
+            })
+        })
+        .catch((error)=>{
+            res.send(error)
+        })
+    },
     postData:(req,res)=>{
-        const body = req
+        const {body} = req
         bookModel.postDataBook(body)
         .then((data)=>{
             res.send(data)

@@ -1,6 +1,6 @@
-const express = require("express");
 require("dotenv").config({});
-const port = 3000;
+const express = require("express");
+const port = process.env.PORT|| 8009;
 const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
@@ -11,7 +11,6 @@ app.engine('hbs', exphbs({
     defaultLayout: 'main',
     extname: '.hbs'
 }));
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(bodyParser.json());
@@ -139,7 +138,7 @@ app.get("/category/edit/:id", (req, res) => {
         }
     });
 });
-app.listen(process.env.PORT||port, () => {
+app.listen(port, () => {
     console.log("Server is running on port " + port);
   });
 module.exports = app;

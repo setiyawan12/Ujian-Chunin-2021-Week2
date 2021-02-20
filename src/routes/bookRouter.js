@@ -2,11 +2,11 @@ const express = require('express');
 const bookRouter = express.Router();
 const bookController = require('../controllers/bookController');
 
-bookRouter.get('/books', bookController.getData);
-bookRouter.post('/save', bookController.postData);
-bookRouter.get('/books/:id', bookController.getDataId);
-bookRouter.delete('/books/:id', bookController.deleteDataId);
-bookRouter.put('/books/:id', bookController.updateBook);
+bookRouter.get('/', bookController.getData);
+bookRouter.get('/:id', bookController.getDataId);
+bookRouter.post('/', bookController.postData);
+bookRouter.delete('/:id', bookController.deleteDataId);
+bookRouter.put('/:id', bookController.updateBook);
 
-bookRouter.get('/', bookController.getDatas);
+// bookRouter.get('/', bookController.getDatas);
 module.exports = bookRouter;

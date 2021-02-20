@@ -1,0 +1,29 @@
+        <form action="/update" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">judul</label>
+            <input type="text" name="id" class="form-control" id="" value="{{results.id}}" hidden>
+            <input type="text" name="judul" class="form-control" id="judul" value="{{results.judul}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">alamat</label>
+            <input type="text" name="penerbit" class="form-control" id="penerbit" value="{{results.penerbit}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">penulis</label>
+            <input type="text" name="penulis" class="form-control" id="penulis" value="{{results.penulis}}">
+        </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">kategori</label>
+            <input type="text" name="category_id" class="form-control" id="category_id" value="{{results.category_id}}">
+        </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Tahun</label>
+            <input type="text" name="tahun" class="form-control" id="tahun" value="{{results.tahun}}">
+        </div>
+        </div>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Cover</label>
+            <input type="text" name="cover" class="form-control" id="cover" value="{{results.cover}}">
+        </div>
+          <button class="btn waves-effect waves-light" type="submit" href="/update/{{id}}">Simpan<i class="material-icons right">send</i></button>
+        </form>

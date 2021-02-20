@@ -1,0 +1,8 @@
+<form action="/UpdateCategory" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kategori</label>
+            <input type="text" name="id_category" class="form-control" id="id_category" value="{{results.id_category}}" hidden>
+            <input type="text" name="kategori" class="form-control" id="kategori" value="{{results.kategori}}">
+        </div>
+          <button class="btn waves-effect waves-light" type="submit" href="/UpdateCategory/{{id_category}}">Simpan<i class="material-icons right">send</i></button>
+ </form>

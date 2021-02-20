@@ -1,4 +1,4 @@
-const bookModel = require('../models/bookModel')
+const bookModel = require('../models/bookModel');
 module.exports={
     getData: (req,res)=>{
         bookModel.getDataBook()
@@ -7,6 +7,19 @@ module.exports={
                 message: 'Success',
                 status:true,
                 data:data
+            })
+        })
+        .catch((error)=>{
+            res.send(error)
+        })
+    },
+    getDatas: (req,res)=>{
+        bookModel.getDataBook()
+        .then ((data)=>{
+            res.render('index_view',{
+                message: 'success',
+                status: true,
+                books:data
             })
         })
         .catch((error)=>{
@@ -28,8 +41,9 @@ module.exports={
         })
     },
     deleteDataId:(req,res)=>{
-        const id = req.params;
-        bookModel.DeleteDataBookById(id)
+        const id = req.params.id;
+        console.log(id);
+        bookModel.DeleteDataBookById({id})
         .then((data)=>{
             res.status(200).send({
                 messag:'success',
@@ -50,5 +64,16 @@ module.exports={
         .catch((error)=>{
             res.send(error)
         })
-    }
+    },
+    updateBook : (req, res) => {
+        const id = req.params;
+        const newBook = req.body;
+        bookModel.updatedata(id, newBook)
+        .then((data) => {
+            res.send(data)
+        })
+        .catch((error) => {
+            res.send(error)
+        })
+    },
 }

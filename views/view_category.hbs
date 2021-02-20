@@ -1,0 +1,36 @@
+ <button class="btn red modal-trigger" data-target="terms">New</button>
+  <div class="modal" id="terms">
+    <div class="modal-content">
+        <form action="/category/save" method="POST">
+        <div class="input-field">
+        <div class="">
+        <label for="kategori">Kategori </label>
+        <input id = "kategori" type= "text" class="validate" name="kategori">
+        </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn teal">Add</button>
+        <button class="btn red modal-close">cancel</button>
+    </div>
+    </form>
+  </div>
+        <table class="highlight centered">
+            <thead>
+              <tr>
+                  <th>Kategori</th>
+                  <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+                {{#each category }}
+                <tr>
+                  <td>{{kategori}}</td>
+                  <td>
+                     <a class="btn-floating btn-small red" href="/category/delete/{{id_category}}"><i class="small material-icons">delete</i></a>
+                     <a class="btn-floating btn-small yellow lighten-1" href="/category/edit/{{id_category}}"><i class="small material-icons">update</i></a>
+                     </td>
+                </tr>
+                {{/each}}
+            </tbody>
+          </table>    

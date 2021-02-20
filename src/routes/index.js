@@ -8,6 +8,4 @@ const categoryRouter = require("../routes/categoryRouter")
 mainRouter.use("/",welcomeRouter)
 mainRouter.use("/", bookRouter)
 mainRouter.use("/", categoryRouter)
-
-
 module.exports = mainRouter;

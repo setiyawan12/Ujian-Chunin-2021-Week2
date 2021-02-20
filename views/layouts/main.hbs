@@ -9,30 +9,45 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
-
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav>
+    {{!-- <nav>
     <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
+      <a href="/" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="/category">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
     </div>
-  </nav>
+  </nav> --}}
 {{{body}}}
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">apps</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red btn-large" href="/category"><i class="large material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1 btn-large"><i class="large material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green btn-large" ><i class="large material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue btn-large"><i class="large material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+      
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./script.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function(){
     const box = document.querySelector(".modal");
     M.Modal.init(box,{})
-})
+});
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+  });
   </script>
 </html>

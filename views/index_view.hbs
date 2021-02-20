@@ -16,8 +16,8 @@
         <input id="penulis" type="text" class="validate" name="penulis">
         </div>
         <div class="">
-        <label for="kategori">Kategori</label>
-        <input id="kategori" type="text" class="validate" name="kategori">
+        <label for="category_id">Kategori</label>
+        <input id="category_id" type="text" class="validate" name="category_id">
         </div>
         <div class="">
         <label for="tahun">Tahun</label>
@@ -55,10 +55,11 @@
                   <td>{{penulis}}</td>
                   <td>{{kategori}}</td>
                   <td>{{tahun}}</td>
-                  <td>{{cover}}</td>
+                  {{!-- <td>{{cover}}</td> --}}
+                  <td><img src="{{cover}}" alt="" style="width: 50px; height: 50px;"></td>
                   <td>
-                     <a class="btn-floating btn-small red"><i class="small material-icons">delete</i></a>
-                     <a class="btn-floating btn-small yellow lighten-1"><i class="small material-icons">update</i></a>
+                     <a class="btn-floating btn-small red" href="/delete/{{id}}"><i class="small material-icons">delete</i></a>
+                     <a class="btn-floating btn-small yellow lighten-1" href="/edit/{{id}}"><i class="small material-icons">update</i></a>
                      </td>
                 </tr>
                 {{/each}}
